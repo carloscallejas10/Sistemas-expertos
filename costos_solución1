@@ -1,0 +1,15 @@
+#Importamos librerias a utilizar
+import pandas as pd
+import numpy as np
+
+#Cargamos el txt
+data = pd.read_csv('C:/Users/Calin/Desktop/mlintro-master2/mlintro-master/02_codigoeficiente/costos.txt', sep=" ", header=None)
+
+#Convertimos la list a un array
+array = np.array(data)
+
+#Guardamos dentro de un array los datos menores a 25$
+menor =array[array<25]
+
+#Sumamos los valores del array para conocer la cantidad de dinero que invirtio la empresa
+suma = np.sum(menor)
