@@ -1,0 +1,19 @@
+#Importamos las librerias a usar
+import pandas as pd
+import numpy as np
+#Leemos los datos dentro del txt
+data = pd.read_csv('C:/Users/Calin/Desktop/mlintro-master2/mlintro-master/02_codigoeficiente/costos.txt', sep=" ", header=None)
+
+
+#Convertimos una lista en un arreglo
+array = np.array(data)
+
+#Declaramos un arreglo vacio
+menor = []
+#Analisamos todos los elementos del arreglo y si es menor que 25 lo almacenamos en 'menor'
+for i in array:
+    if i < 25:
+        menor.append(i)
+
+#Sumamos todos los elemntos del arreglo
+suma = np.sum(menor)
