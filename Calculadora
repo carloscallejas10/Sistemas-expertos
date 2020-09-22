@@ -5,7 +5,7 @@ from tkinter import *
 import parser
 
 root= Tk()
-root.title("Calculator")
+root.title("Calcu")
 
 
 display = Entry(root)
@@ -13,19 +13,20 @@ display.grid(row=1, columnspan=6, sticky=W+E)
 
 i= 0 
 
-
+#Funcion que captura los numeros
 def get_numbers(n):
     global i
     display.insert(i, n)
     i+=1
 
+#Captura operacion matematica
 def get_operation(operator):
         global i
         operator_length = len(operator)
         display.insert(i, operator)
         i+=operator_length
 
-
+#AC 
 def clear_display():
     display.delete(0, END)
 
