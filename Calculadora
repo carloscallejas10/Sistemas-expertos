@@ -6,6 +6,9 @@ import parser
 
 root= Tk()
 root.title("Calcu")
+root.geometry('200x200')
+root.configure(background='sky blue')
+
 
 
 display = Entry(root)
