@@ -13,3 +13,6 @@ menor =array[array<25]
 
 #Sumamos los valores del array para conocer la cantidad de dinero que invirtio la empresa
 suma = np.sum(menor)
+
+
+print ('La inversion es de: ', '$',suma)
