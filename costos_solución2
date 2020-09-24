@@ -17,3 +17,6 @@ for i in array:
 
 #Sumamos todos los elemntos del arreglo
 suma = np.sum(menor)
+
+#Imprimimos el valor de la inversion
+print('La inversion de la empresa es: ','$',suma)
