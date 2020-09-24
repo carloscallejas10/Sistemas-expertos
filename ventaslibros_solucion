@@ -1,4 +1,7 @@
-#Solucion 2
+#Solucion 3
+
+#Solucion utilizando el metodo interseccion
+
 inicio = time.time()
 libros_ventas = list(set(periodo24_ventas_libros).intersection(set(catalogo_libros)))
 print(libros_ventas)
