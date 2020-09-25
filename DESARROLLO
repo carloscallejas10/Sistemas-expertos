@@ -1,0 +1,6 @@
+#Funcion intersection
+
+inicio = time.time()
+libros_ventas = list(set(periodo24_ventas_libros).intersection(set(catalogo_libros)))
+print(len(libros_ventas))
+print('Duracion: {} segundos'.format(time.time() - inicio))
