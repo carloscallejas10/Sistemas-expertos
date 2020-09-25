@@ -9,6 +9,7 @@ with open('C:/Users/Calin/Desktop/mlintro-master2/mlintro-master/02_codigoeficie
     catalogo_libros = f.read().split('\n')
 
 #Solucion 1
+
 inicio = time.time()
 libros_vendidos = []
 
@@ -24,6 +25,7 @@ Duracion: 14.02414345741272 segundos
 
 
 #Solucion 2
+
 inicio = time.time()
 libros_vendidos = np.intersect1d(periodo24_ventas_libros, catalogo_libros)
 print(len(libros_vendidos))
@@ -33,11 +35,7 @@ print('Duracion: {} segundos'.format(time.time() - inicio))
 Duracion: 0.02644062042236328 segundos
 
 
-
-
-#Solucion 3
-
-#Solucion utilizando el metodo interseccion
+#Solucion 3 utilizando el metodo interseccion
 
 inicio = time.time()
 libros_ventas = list(set(periodo24_ventas_libros).intersection(set(catalogo_libros)))
@@ -46,3 +44,17 @@ print('Duracion: {} segundos'.format(time.time() - inicio))
 
 96
 Duracion: 0.00797414779663086 segundos
+
+
+#Solucion 4
+
+values = list(filter(lambda x: x in periodo24_ventas_libros, catalogo_libros))
+print (len(values))
+print('Duracion: {} segundos'.format(time.time() - inicio))
+
+96
+Duracion: 106.34653806686401 segundos
+
+
+
+
