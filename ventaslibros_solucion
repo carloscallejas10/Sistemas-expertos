@@ -1,3 +1,40 @@
+import time
+import pandas as pd
+import numpy as np
+
+with open('C:/Users/Calin/Desktop/mlintro-master2/mlintro-master/02_codigoeficiente/libros_24_meses.txt') as f:
+    periodo24_ventas_libros = f.read().split('\n')
+    
+with open('C:/Users/Calin/Desktop/mlintro-master2/mlintro-master/02_codigoeficiente/catalogo_libros.txt') as f:
+    catalogo_libros = f.read().split('\n')
+
+#Solucion 1
+inicio = time.time()
+libros_vendidos = []
+
+for libro in periodo24_ventas_libros:
+    if libro in catalogo_libros:
+        libros_vendidos.append(libro)
+
+print(len(libros_vendidos))
+print('Duracion: {} segundos'.format(time.time() - inicio))
+
+96
+Duracion: 14.02414345741272 segundos
+
+
+#Solucion 2
+inicio = time.time()
+libros_vendidos = np.intersect1d(periodo24_ventas_libros, catalogo_libros)
+print(len(libros_vendidos))
+print('Duracion: {} segundos'.format(time.time() - inicio))
+
+96
+Duracion: 0.02644062042236328 segundos
+
+
+
+
 #Solucion 3
 
 #Solucion utilizando el metodo interseccion
@@ -6,3 +43,6 @@ inicio = time.time()
 libros_ventas = list(set(periodo24_ventas_libros).intersection(set(catalogo_libros)))
 print(libros_ventas)
 print('Duracion: {} segundos'.format(time.time() - inicio))
+
+96
+Duracion: 0.00797414779663086 segundos
