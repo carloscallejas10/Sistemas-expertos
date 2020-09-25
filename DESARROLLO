@@ -1,3 +1,18 @@
+#Importamos las librerias a usar
+import time
+import pandas as pd
+import numpy as np
+
+
+#Cargamos los datasets
+
+with open('C:/Users/Calin/Desktop/mlintro-master2/mlintro-master/02_codigoeficiente/libros_24_meses.txt') as f:
+    periodo24_ventas_libros = f.read().split('\n')
+    
+with open('C:/Users/Calin/Desktop/mlintro-master2/mlintro-master/02_codigoeficiente/catalogo_libros.txt') as f:
+    catalogo_libros = f.read().split('\n')
+
+
 #Funcion intersection
 
 inicio = time.time()
