@@ -39,18 +39,7 @@ print('Duracion: {} segundos'.format(time.time() - inicio))
 Duracion: 0.02644062042236328 segundos
 
 
-#Solucion 3 utilizando el metodo interseccion
-
-inicio = time.time()
-libros_ventas = list(set(periodo24_ventas_libros).intersection(set(catalogo_libros)))
-print(libros_ventas)
-print('Duracion: {} segundos'.format(time.time() - inicio))
-
-96
-Duracion: 0.00797414779663086 segundos
-
-
-#Solucion 4
+#Solucion 3 
 
 values = list(filter(lambda x: x in periodo24_ventas_libros, catalogo_libros))
 print (len(values))
@@ -59,6 +48,17 @@ print('Duracion: {} segundos'.format(time.time() - inicio))
 96
 Duracion: 106.34653806686401 segundos
 
+
+
+#Solucion 4 Funcion Intersection
+
+inicio = time.time()
+libros_ventas = list(set(periodo24_ventas_libros).intersection(set(catalogo_libros)))
+print(libros_ventas)
+print('Duracion: {} segundos'.format(time.time() - inicio))
+
+96
+Duracion: 0.00797414779663086 segundos
 
 
 
