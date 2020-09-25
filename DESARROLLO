@@ -13,7 +13,7 @@ with open('C:/Users/Calin/Desktop/mlintro-master2/mlintro-master/02_codigoeficie
     catalogo_libros = f.read().split('\n')
 
 
-#Funcion intersection
+#Propuesta de desarrollo usando la funcion intersection
 
 inicio = time.time()
 libros_ventas = list(set(periodo24_ventas_libros).intersection(set(catalogo_libros)))
